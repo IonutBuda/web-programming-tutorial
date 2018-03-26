@@ -16,9 +16,9 @@ function addNumbers(a, b) {
         degete = a;
     }
 
-    for (; degete > 0;) {
-        degete--;
-        suma++;
+    while (degete) {
+        degete--; //scadem deget
+        suma++; //crestem suma
         console.info(suma + " - " + "au mai ramas " + degete + "degetele")
     }
     console.info("Suma este " + suma);
