@@ -9,12 +9,19 @@ function addNumbers(a, b) {
     console.info("primul numar este " + a);
     console.info("al doilea numar este " + b);
 
-    for (; b > 0;) {
-        b--;
-        a++;
-        console.info(a + " - " + "au mai ramas " + b + "degetele")
+    var suma = a;//maxim
+    var degete = b; //minim
+    if (a < b) {
+        suma = b;
+        degete = a;
     }
-    console.info("Suma este " + a);
+
+    for (; degete > 0;) {
+        degete--;
+        suma++;
+        console.info(suma + " - " + "au mai ramas " + degete + "degetele")
+    }
+    console.info("Suma este " + suma);
 }
 
 var count = addNumbers(5, 3);
