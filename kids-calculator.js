@@ -12,7 +12,7 @@ function addNumbers(a, b) {
     for (; b > 0;) {
         b--;
         a++;
-        console.info(a + " - " + "au mai ramas " + (b - 1) + "degetele")
+        console.info(a + " - " + "au mai ramas " + b + "degetele")
     }
     console.info("Suma este " + a);
 }
