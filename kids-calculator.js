@@ -24,4 +24,25 @@ function addNumbers(a, b) {
     console.info("Suma este " + suma);
 }
 
-var count = addNumbers(5, 3);
+//var count = addNumbers(5, 3);
+//var count = addNumbers(45,32);
+
+function isNumberPrime(n) {
+    for (var i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function showPrimeNumbersTo(n) {
+    for (var i = 1; i < n; i++) {
+        if (isNumberPrime(i)) {
+            console.log(i)
+        }
+    }
+
+};
+
+showPrimeNumbersTo(37);
