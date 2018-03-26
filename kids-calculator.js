@@ -10,8 +10,8 @@ function addNumbers(a, b) {
     console.info("al doilea numar este " + b);
 
     for (; b > 0;) {
-        a++;
         b--;
+        a++;
         console.info(a + " - " + "au mai ramas " + (b - 1) + "degetele")
     }
     console.info("Suma este " + a);
