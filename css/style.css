@@ -182,3 +182,6 @@ footer {
 #calendar-widget td {
     border: 1px solid #29a7e1;
 }
+button {
+   margin-left: 30px;
+}
