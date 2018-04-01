@@ -1,4 +1,4 @@
-var leftBar = Document.getElementById("left-bar");
+var leftBar = document.getElementById("left-bar");
 var widgets = leftBar.getElementsByTagName("div");
 var expandCollapseButton = leftBar.getElementsByTagName("button");
 expandCollapseButton.onclick = function() {
@@ -13,4 +13,4 @@ expandCollapseButton.onclick = function() {
         }
         expandCollapseButton.innerHTML = "Collapse all widgets";
     }
-}
+};
