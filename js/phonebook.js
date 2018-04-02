@@ -1,4 +1,17 @@
-var row1 = '<tr><td>Buda</td><td>Ionut</td><td>0752386608</td></tr>'
-var row2 = '<tr><td>Nicolae</td><td>Matei</td><td>0324235235</td></tr>'
+function getRow(firstName, lastName, phone) {
+    return '<tr><td>' + firstName + '</td><td>' + lastName + '</td><td>' + phone + '</td></tr>'
+}
 
-$('#phone-book tbody').html(row1 + row2);
+var persons = [
+    getRow('Ionut', 'Buda', '0'),
+    getRow('Nicolae', 'Matei', '0324235235'),
+    getRow('Raluca', 'Ignat', '0766766723')
+];
+
+var rows = '';
+
+persons.forEach(function (person) {
+    rows += person;
+});
+
+$('#phone-book tbody').html(rows);
