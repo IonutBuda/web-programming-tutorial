@@ -3,15 +3,32 @@ function getRow(firstName, lastName, phone) {
 }
 
 var persons = [
-    getRow('Ionut', 'Buda', '0'),
-    getRow('Nicolae', 'Matei', '0324235235'),
-    getRow('Raluca', 'Ignat', '0766766723')
+    ('Ionut', 'Buda', '0752319222'),
+    ('Nicolae', 'Matei', '0324235235'),
+    ('Raluca', 'Ignat', '0766766723')
 ];
-
 var rows = '';
 
 persons.forEach(function (person) {
-    rows += person;
+    rows += getRow(person);
 });
 
+function pentruFiecarePers(persons) {
+    persons.forEach(function (persons) {
+        console.info ("Salut" + person[0])
+    })
+}
+
 $('#phone-book tbody').html(rows);
+
+var person={
+    nume: "Matei",
+    prenume: "Nicolae",
+    hasJob: true,
+    sayHello: function() {
+        return "Salut, bine ai venit pe site-ul lui " + this.nume + " " + this.prenume;
+    },
+    sleep: function() {
+        return this.sayHello()+": Yawn..."
+    }
+}
