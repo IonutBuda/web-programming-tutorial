@@ -2,29 +2,36 @@ function getRow(firstName, lastName, phone) {
     return '<tr><td>' + firstName + '</td><td>' + lastName + '</td><td>' + phone + '</td></tr>'
 }
 
-var persons = [
-    ['Ionut', 'Buda', '752319222'],
-    ['Nicolae', 'Matei', '324235235'],
-    ['Raluca', 'Ignat', '766766723']
-];
-var rows = '';
+var persons = [];
 
-persons.forEach(function (person) {
-    rows += getRow(person[0],person[1],person[2]);
+$.get("js/mocks/phone-book.json").complete(function () {
+    console.warn("phone book complete",arguments);
+});
+
+console.info("Loading persons");
+
+$.ajax({
+    url: 'js/mocks/phone-book.json',
+
+        }).done(function (data) {
+            console.info("done...",data);
+            display(data);
+
 });
 
 
-$('#phone-book tbody').html(rows);
+function display(persons) {
+    var rows = '';
 
-var person={
-    nume: "Matei",
-    prenume: "Nicolae",
-    hasJob: true,
-    sayHello: function() {
-        return "Salut, bine ai venit pe site-ul lui "
-            + this.nume + " " + this.prenume;
-    },
-    sleep: function() {
-        return this.sayHello()+": Yawn..."
-    }
+    function createRows(person) {
+        rows += getRow(person.firstName,person.lastName,person.phone);
+    };
+
+
+
+    persons.forEach(createRows);
+
+
+    $('#phone-book tbody').html(rows);
+
 }
