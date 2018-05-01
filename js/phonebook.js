@@ -1,9 +1,9 @@
-function getRow(firstName, lastName, phone) {
+function getRow(person) {
     return '<tr>' +
-        '<td>' + firstName + '</td>' +
-        '<td>' + lastName + '</td>' +
-        '<td>' + phone + '</td>' +
-        '<td><a href="/tmp/remove-contact.html">x</a></td>' +
+        '<td>' + person.firstName + '</td>' +
+        '<td>' + person.lastName + '</td>' +
+        '<td>' + person.phone + '</td>' +
+        `<td><a href="/tmp/remove-contact.html?id=${person.id}">x</a></td>` +
         '</tr>'
 }
 
@@ -29,7 +29,7 @@ function display(persons) {
     var rows = '';
 
     function createRows(person) {
-        rows += getRow(person.firstName, person.lastName, person.phone);
+        rows += getRow(person);
     };
 
 
@@ -38,8 +38,8 @@ function display(persons) {
     rows += '<tr>' +
         '<td><input type="text" name="firstName" required placeholder="Enter first name"></td>' +
         '<td><input type="text" name="lastName" placeholder="Enter last name"></td>' +
-        '<td><input type="text" name="phone" required placeholder="Enter phone">' +
-        '<button type="submit">Add</button></td>' +
+        '<td><input type="text" name="phone" required placeholder="Enter phone"></td>' +
+        '<td><button type="submit">Add</button></td>' +
         '</tr>';
 
 

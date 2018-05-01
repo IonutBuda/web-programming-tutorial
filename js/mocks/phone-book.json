@@ -1,5 +1,20 @@
 [
-  {"firstName":"Ionut",  "lastName":"Buda", "phone":"752319222"},
-  {"firstName":"Nicolae",  "lastName":"Matei", "phone":"324235235"},
-  {"firstName":"Raluca",  "lastName":"Ignat", "phone":"766766723"}
+  {
+    "id": 1,
+    "firstName": "Ionut",
+    "lastName": "Buda",
+    "phone": "752319222"
+  },
+  {
+    "id": 2,
+    "firstName": "Nicolae",
+    "lastName": "Matei",
+    "phone": "324235235"
+  },
+  {
+    "id": 3,
+    "firstName": "Raluca",
+    "lastName": "Ignat",
+    "phone": "766766723"
+  }
 ]
