@@ -4,7 +4,7 @@
 
     <title>Exchange</title>
 
-
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Monoton"/>
     <link rel="stylesheet" href="css/neontext.css">
 </head>
 <body>
@@ -18,40 +18,38 @@
         SCHIMB VALUTAR
     </a></p>
     <div id="schimb">
+        <div class="valuta">
+            <input type="text" id="RON" size="1" value="0" onchange="ronfunc()"/>
+            <label for="RON"> RON </label>
+        </div>
 
-        <input type="text" id="RON" size="1" value="0" onchange="ronfunc()"/>
-        <label for="RON"> RON </label>
+        <div class="valuta">
+            <input type="text" id="GBP" size="1" value="0" onchange="gbpfunc()"/>
+            <label for="GBP"> GBP </label>
+        </div>
 
-        <br>
+        <div class="valuta">
+            <input type="text" id="USD" size="1" value="0" onchange="usdfunc()"/>
+            <label for="USD"> USD </label>
+        </div>
 
-        <input type="text" id="GBP" size="1" value="0" onchange="gbpfunc()"/>
-        <label for="GBP"> GBP </label>
+        <div class="valuta">
+            <input type="text" id="EUR" size="1" value="0" onchange="eurfunc()"/>
+            <label for="EUR"> EUR </label>
+        </div>
 
-        <br>
-
-        <input type="text" id="USD" size="1" value="0" onchange="usdfunc()"/>
-        <label for="USD"> USD </label>
-
-        <br>
-
-        <input type="text" id="EUR" size="1" value="0" onchange="eurfunc()"/>
-        <label for="EUR"> EUR </label>
-
-        <br>
-
-        <input type="text" id="CAD" size="1" value="0" onchange="cadfunc()"/>
-        <label for="CAD"> CAD </label>
-
+        <div class="valuta">
+            <input type="text" id="CAD" size="1" value="0" onchange="cadfunc()"/>
+            <label for="CAD"> CAD </label>
+        </div>
 
     </div>
 
+    <script src="js/lib/money.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript">
+    </script>
+    <script src="js/schimbvalutar.js" type="text/javascript"></script>
+
 </div>
-
-<script src="js/lib/money.min.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript">
-</script>
-<script src="js/schimbvalutar.js" type="text/javascript"></script>
-
-
 </body>
 </html>
