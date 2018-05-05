@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Exchange</title>
+
+
+    <link rel="stylesheet" href="css/neontext.css">
+</head>
+<body>
+
+
+<div id="container">
+
+    <p><a href="#">
+        LA NELUTU
+        <br>
+        SCHIMB VALUTAR
+    </a></p>
+    <div id="schimb">
+
+        <input type="text" id="RON" size="1" value="0" onchange="ronfunc()"/>
+        <label for="RON"> RON </label>
+
+        <br>
+
+        <input type="text" id="GBP" size="1" value="0" onchange="gbpfunc()"/>
+        <label for="GBP"> GBP </label>
+
+        <br>
+
+        <input type="text" id="USD" size="1" value="0" onchange="usdfunc()"/>
+        <label for="USD"> USD </label>
+
+        <br>
+
+        <input type="text" id="EUR" size="1" value="0" onchange="eurfunc()"/>
+        <label for="EUR"> EUR </label>
+
+        <br>
+
+        <input type="text" id="CAD" size="1" value="0" onchange="cadfunc()"/>
+        <label for="CAD"> CAD </label>
+
+
+    </div>
+
+</div>
+
+<script src="js/lib/money.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript">
+</script>
+<script src="js/schimbvalutar.js" type="text/javascript"></script>
+
+
+</body>
+</html>

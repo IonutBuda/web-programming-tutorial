@@ -45,7 +45,6 @@ function display(persons) {
         '</tr>';
 
 
-
     $('#phone-book tbody').html(rows);
 
     $("#phone-book tbody a.edit").click(function () {
